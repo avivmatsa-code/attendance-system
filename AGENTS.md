@@ -2,7 +2,7 @@
 
 ## Scope
 
-This repository uses the AMIS Clear UI design standard by Aviv Matsa - Smart Information Systems.
+This repository uses the AMIS Clear UI v0.2 design standard by Aviv Matsa - Smart Information Systems.
 
 Before changing any user interface, read:
 
@@ -11,13 +11,15 @@ Before changing any user interface, read:
 
 ## Design Requirements
 
-- Treat AMIS Clear UI as the source of truth for visual design.
+- Treat AMIS Clear UI v0.2 as the source of truth for visual design.
 - Use Fluent 2 only as conceptual inspiration. Do not copy Microsoft branding, product screens, logos, fonts, or branded assets.
 - Preserve a clean, spacious, calm, professional information-system appearance.
 - Prefer whitespace and hierarchy over excessive cards, borders, and shadows.
 - Do not use gradients, glass effects, decorative illustrations, oversized headings, or heavy animation unless explicitly requested.
 - Use the provided design tokens.
-- Default theme: `ocean`. Also support `forest` and `plum`.
+- Default theme: `azure`. Support exactly `azure`, `turquoise`, `emerald`, `violet`, `raspberry`, and `sunset`.
+- Migrate saved themes: `ocean` to `azure`, `forest` to `emerald`, and `plum` to `violet`.
+- Theme names must be displayed only in the current interface language.
 - Theme changes must not alter semantic status colors or layout.
 - Support Hebrew RTL and English LTR completely.
 - Use CSS logical properties where possible.
@@ -31,9 +33,12 @@ The application header should include, when relevant:
 
 - application name
 - a restrained `BETA` badge while the product is beta
+- current date or system date under the application name
 - Hebrew/English language selection
-- display settings for choosing Ocean, Forest, or Plum
+- display settings for choosing the six AMIS themes
 - an About action
+
+Do not show contextual information such as work month, customer, case, file, or period under the application name in the header. Place contextual information in the workspace, filters, summary cards, or internal screen headings.
 
 Do not add tabs solely to make the application appear multi-page.
 
@@ -42,7 +47,8 @@ Do not add tabs solely to make the application appear multi-page.
 Every beta application must provide an About dialog containing:
 
 - application name
-- version
+- version number
+- version date
 - Beta status
 - a warning that errors or inaccuracies may occur
 - `Aviv Matsa - Smart Information Systems`
@@ -52,8 +58,9 @@ Every beta application must provide an About dialog containing:
 ## Before Completing A UI Task
 
 1. Verify Hebrew RTL and English LTR.
-2. Verify all three themes.
+2. Verify all six themes.
 3. Check 390px, 768px, 1280px, and 1440px widths.
 4. Confirm that no logo, Help option, or Report-a-problem option was invented.
 5. Confirm that new colors and spacing use tokens.
-6. Summarize deviations from the standard.
+6. Confirm About includes version number and version date.
+7. Summarize deviations from the standard.
