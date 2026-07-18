@@ -119,7 +119,7 @@
 }
 
 :root {
-  --color-brand: var(--brand-primary);
+  --color-brand: var(--brand-active);
   --color-brand-hover: var(--brand-hover);
   --color-brand-active: var(--brand-active);
   --color-brand-accent: var(--brand-accent);
