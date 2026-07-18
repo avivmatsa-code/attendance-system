@@ -1,4 +1,4 @@
-/* AMIS Clear UI - Design Tokens v0.1 */
+/* AMIS Clear UI - Design Tokens v0.2 */
 
 :root {
   --font-family-base: Arial, "Noto Sans Hebrew", sans-serif;
@@ -33,13 +33,13 @@
   --color-border: #d5dee6;
   --color-border-strong: #aebdca;
 
-  --color-success: #287a4b;
+  --color-success: #16834f;
   --color-success-bg: #edf7f1;
-  --color-warning: #946200;
+  --color-warning: #a86400;
   --color-warning-bg: #fff7e6;
-  --color-danger: #b33a3a;
+  --color-danger: #c0363f;
   --color-danger-bg: #fff0f0;
-  --color-info: #286f9e;
+  --color-info: #176fa5;
   --color-info-bg: #edf6fb;
 
   --shadow-panel: 0 2px 8px rgba(15, 35, 55, 0.06);
@@ -51,36 +51,80 @@
   --panel-header-height: 52px;
   --app-header-height: 70px;
 
+  --header-primary-button-border: rgba(255, 255, 255, 0.78);
+  --header-primary-button-inner-outline: rgba(255, 255, 255, 0.18);
+
   color-scheme: light;
 }
 
 :root,
-[data-theme="ocean"] {
-  --color-brand: #285f85;
-  --color-brand-hover: #204f70;
-  --color-brand-active: #193f5b;
-  --color-brand-subtle: #e9f2f7;
-  --color-brand-border: #9ebfd2;
-  --color-link: #246b99;
-  --color-focus: #397fae;
+[data-theme="azure"] {
+  --brand-primary: #0969c3;
+  --brand-hover: #075aa8;
+  --brand-active: #064b8d;
+  --brand-accent: #35a3ff;
+  --brand-subtle: #eaf5ff;
+  --brand-border: #93c8f2;
+  --focus-color: #0969c3;
 }
 
-[data-theme="forest"] {
-  --color-brand: #28766d;
-  --color-brand-hover: #21645d;
-  --color-brand-active: #1a514b;
-  --color-brand-subtle: #e8f4f1;
-  --color-brand-border: #9bc7c0;
-  --color-link: #246e67;
-  --color-focus: #368d82;
+[data-theme="turquoise"] {
+  --brand-primary: #008c95;
+  --brand-hover: #007780;
+  --brand-active: #00636b;
+  --brand-accent: #26c3c9;
+  --brand-subtle: #e7f8f8;
+  --brand-border: #84d3d6;
+  --focus-color: #008c95;
 }
 
-[data-theme="plum"] {
-  --color-brand: #72527d;
-  --color-brand-hover: #604568;
-  --color-brand-active: #4e3855;
-  --color-brand-subtle: #f2edf4;
-  --color-brand-border: #c4afca;
-  --color-link: #704d7d;
-  --color-focus: #896595;
+[data-theme="emerald"] {
+  --brand-primary: #00875a;
+  --brand-hover: #00724c;
+  --brand-active: #005e3e;
+  --brand-accent: #29bd83;
+  --brand-subtle: #e9f8f1;
+  --brand-border: #8bd4b6;
+  --focus-color: #00875a;
+}
+
+[data-theme="violet"] {
+  --brand-primary: #7047c8;
+  --brand-hover: #6039b1;
+  --brand-active: #502f95;
+  --brand-accent: #a27aff;
+  --brand-subtle: #f2edff;
+  --brand-border: #c0adf0;
+  --focus-color: #7047c8;
+}
+
+[data-theme="raspberry"] {
+  --brand-primary: #c52a68;
+  --brand-hover: #aa2259;
+  --brand-active: #8f1c4b;
+  --brand-accent: #ee6798;
+  --brand-subtle: #fdebf2;
+  --brand-border: #eca3bf;
+  --focus-color: #c52a68;
+}
+
+[data-theme="sunset"] {
+  --brand-primary: #d95d20;
+  --brand-hover: #bd4d18;
+  --brand-active: #9f4014;
+  --brand-accent: #ff914f;
+  --brand-subtle: #fff0e7;
+  --brand-border: #efb18d;
+  --focus-color: #d95d20;
+}
+
+:root {
+  --color-brand: var(--brand-primary);
+  --color-brand-hover: var(--brand-hover);
+  --color-brand-active: var(--brand-active);
+  --color-brand-accent: var(--brand-accent);
+  --color-brand-subtle: var(--brand-subtle);
+  --color-brand-border: var(--brand-border);
+  --color-link: var(--brand-primary);
+  --color-focus: var(--focus-color);
 }
