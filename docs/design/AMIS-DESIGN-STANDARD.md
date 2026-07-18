@@ -1,4 +1,4 @@
-# AMIS Clear UI - Design Standard v0.1
+# AMIS Clear UI - Design Standard v0.2
 
 ## Identity
 
@@ -53,21 +53,24 @@ Recommended heights:
 | Panel header | 52px |
 | App header | 68-72px |
 
-## Shape, Borders, Shadows
-
-Default component radius is 6px. Borders should be thin and light. Panels should usually have no shadow or a very subtle shadow. Stronger shadows are reserved for dialogs, dropdowns, drawers, and floating layers.
-
 ## Themes
 
-Every system should support three themes:
+Every system must support exactly six themes:
 
-- Ocean - default
-- Forest
-- Plum
+- Azure - default / כחול חי
+- Turquoise / טורקיז
+- Emerald / אזמרגד
+- Violet / סגול
+- Raspberry / פטל
+- Sunset / כתום שקיעה
 
-Theme selection changes only brand/link colors. Semantic colors for success, warning, danger, and info remain unchanged. Persist the user's choice locally and load Ocean when no choice exists.
+Theme selection changes only brand/link colors. Semantic colors for success, warning, danger, and info remain unchanged.
 
-Theme selection should live in display settings, not as three permanent header buttons.
+Persist the user's choice locally. When upgrading from v0.1, migrate `ocean` to `azure`, `forest` to `emerald`, and `plum` to `violet`. If no valid saved theme exists, use `azure`.
+
+Theme names must be displayed only in the current interface language. Hebrew UI shows only Hebrew theme names. English UI shows only English theme names.
+
+Theme selection should live in display settings, not as permanent header buttons.
 
 ## Header
 
@@ -75,9 +78,12 @@ The header may include:
 
 - application name
 - restrained BETA badge while the system is beta
+- current date or system date under the application name
 - Hebrew/English selection
 - display settings
 - About
+
+The text under the application name must show only current/system date. Do not show contextual information such as work month, customer, case, file, or period in the header subtitle. Place contextual information in the workspace, filters, summary cards, or internal screen headings.
 
 Do not invent a logo. The system name is text-only until a logo is supplied. Do not add Help or Report-a-problem unless real content or destinations exist.
 
@@ -86,12 +92,20 @@ Do not invent a logo. The system name is text-only until a logo is supplied. Do 
 Every beta system must include an About dialog with:
 
 - application name
-- version
+- version number
+- version date
 - Beta status
 - a warning that errors or inaccuracies may occur
 - credit to Aviv Matsa
 - mention of AI assistance
 - copyright year
+
+Version display examples:
+
+```text
+גרסת מערכת: 1.3.2 · 18 ביולי 2026
+System version: 1.3.2 · July 18, 2026
+```
 
 Base text:
 
@@ -101,9 +115,13 @@ Base text:
 >
 > Aviv Matsa - Smart Information Systems
 
+## Primary Action On Dark Backgrounds
+
+A primary button on a dark header or dark surface must include a visible light border or subtle inner outline, using `--header-primary-button-border` and `--header-primary-button-inner-outline` where possible.
+
 ## Direction And Language
 
-Support Hebrew RTL and English LTR. Language switching changes all UI text, `lang`, `dir`, date/time/number formats, month/day names, directional layout and icons when relevant, and printed/exported UI text.
+Support Hebrew RTL and English LTR. Language switching changes all UI text, `lang`, `dir`, date/time/number formats, month/day names, directional layout and icons when relevant, printed/exported UI text, and theme names.
 
 Use CSS logical properties where possible. Numbers, times, URLs, emails, and code should remain LTR where appropriate.
 
