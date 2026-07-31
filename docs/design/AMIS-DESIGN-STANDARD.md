@@ -55,7 +55,7 @@ Recommended heights:
 
 ## Themes
 
-Every system must support exactly six themes:
+Every system must support exactly seven themes:
 
 - Azure - default / כחול חי
 - Turquoise / טורקיז
@@ -63,6 +63,7 @@ Every system must support exactly six themes:
 - Violet / סגול
 - Raspberry / פטל
 - Sunset / כתום שקיעה
+- Slate / אפור צפחה
 
 Theme selection changes only brand/link colors. Semantic colors for success, warning, danger, and info remain unchanged.
 

@@ -118,6 +118,16 @@
   --focus-color: #d95d20;
 }
 
+[data-theme="slate"] {
+  --brand-primary: #475569;
+  --brand-hover: #334155;
+  --brand-active: #1e293b;
+  --brand-accent: #94a3b8;
+  --brand-subtle: #f1f5f9;
+  --brand-border: #cbd5e1;
+  --focus-color: #475569;
+}
+
 :root {
   --color-brand: var(--brand-active);
   --color-brand-hover: var(--brand-hover);
